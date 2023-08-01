@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Medisail</title>
+        <meta charset="utf-8">
+        <!--<meta
+            name="description"
+            content="Admin Template and Starter Kit with Angular, Angular Material Components and TailwindCSS">
+        <meta
+            name="keywords"
+            content="Fuse,HTML,CSS,Angular,Angular 13,Angular 14,Angular 15,Material,Angular Components,Tailwind,Tailwind CSS,TailwindCSS,Admin Template,Admin Starter Kit">
+        <meta
+            name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+        -->
+        <base href="/">
+
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            type="image/png"
+            href="data:image/jpeg;base64,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">
+        <link
+            rel="icon"
+            type="image/png"
+            href="medisail.png">
+
+        <!-- Fonts -->
+        <link
+            href="assets/fonts/inter/inter.css"
+            rel="stylesheet">
+
+        <link
+            href="https://fonts.gstatic.com"
+            rel="preconnect">
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+            rel="stylesheet">
+
+        <!-- Icon fonts -->
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+
+        <!-- Splash screen styles -->
+        <link
+            href="assets/styles/splash-screen.css"
+            rel="stylesheet">
+            <link rel="manifest" href="./manifest.json">
+
+    </head>
+
+    <body>
+
+        <!-- Splash screen -->
+        <fuse-splash-screen>
+            <img
+                src="assets/images/logo/Medisail.png"
+                alt="Fuse logo">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </fuse-splash-screen>
+
+        <!-- App root -->
+        <app-root></app-root>
+
+    </body>
+    <head>
+    <link rel="manifest" href="./manifest.json">
+</head>
+
+</html>
+
+

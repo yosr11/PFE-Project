@@ -1,0 +1,33 @@
+<form *ngIf="waypointForm" [formGroup]="waypointForm"  >
+
+  <mat-form-field appearance="fill">
+  <mat-label>Name:</mat-label><br>
+  <input matInput formControlName="name" />
+  <mat-error   *ngIf="waypointForm.get('name').hasError('required')">
+    Name is required
+</mat-error>
+</mat-form-field><br>
+
+<mat-form-field appearance="fill">
+<mat-label>Latitude:</mat-label><br>
+<input matInput formControlName="latitude" />
+<mat-error   *ngIf="waypointForm.get('latitude').hasError('required')">
+  Latitude is required
+</mat-error>
+</mat-form-field><br>
+
+<mat-form-field appearance="fill">
+  <mat-label>Longitude :</mat-label><br>
+  <input matInput formControlName="longitude" />
+  <mat-error   *ngIf="waypointForm.get('longitude').hasError('required')">
+    Longitude is required
+  </mat-error>
+  </mat-form-field><br>
+    
+  <button  class="fuse-mat-button-large w-full  bg-gradient-to-r from-blue-900 to-blue-300"
+  mat-button (click)="ajout()">Ajouter</button><br><br>
+  
+</form>
+ 
+
+  

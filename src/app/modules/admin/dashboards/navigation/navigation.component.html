@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ma carte Leaflet</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <style>
+    #table-container {
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 5%;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="mapid"></div>
+  <div id="table-container">
+    <table>
+      <thead>
+        <pre>Latitude: {{ latitude }}{{ ' '.repeat(45) }}Longitude: {{ longitude }}{{ ' '.repeat(45) }}Speed: {{ speed }}Km/h</pre>
+      </thead>
+    </table>
+  </div>
+  <script src="node_modules/leaflet/dist/leaflet.js"></script>
+</body>
+</html>

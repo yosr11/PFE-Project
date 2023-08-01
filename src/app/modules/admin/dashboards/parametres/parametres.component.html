@@ -1,0 +1,105 @@
+<body background="assets/images/weather/plage2.png" style="width:100%; height: 100%; background-repeat: no-repeat; background-size: cover;"  >
+<div class="container">
+  <h2 style="color: #F49807;">Paramètres de Notifications</h2>
+<div class="item">
+  <mat-icon svgIcon="mat_solid:water_drop"></mat-icon> Pompe de cale
+  <input type="checkbox" id="toggle-button-checkbox-1"
+(change)="updatePump($event.target.checked)">
+<label class="toggle-button-switch" style="margin-right: 75.6%; " 
+for="toggle-button-checkbox-1"></label>
+<div class="toggle-button-text">
+<div class="toggle-button-text-on">ON</div>
+<div class="toggle-button-text-off">OFF</div>
+</div>
+
+</div>
+
+<div class="item">
+  <mat-icon svgIcon="anchor"></mat-icon> Mode mouillage
+  <input type="checkbox" id="toggle-button-checkbox-2"
+(change)="updatemouillage($event.target.checked)">
+<label class="toggle-button-switch-1"
+for="toggle-button-checkbox-2"></label>
+<div class="toggle-button-text">
+<div class="toggle-button-text-on">ON</div>
+<div class="toggle-button-text-off">OFF</div>
+</div>
+</div>
+
+<div class="item">
+  <mat-icon svgIcon="security"></mat-icon> Sécurité 
+  <input type="checkbox" id="toggle-button-checkbox-3"
+(change)="updateSecurity($event.target.checked)">
+<label class="toggle-button-switch-2" 
+for="toggle-button-checkbox-3"></label>
+<div class="toggle-button-text">
+<div class="toggle-button-text-on">ON</div>
+<div class="toggle-button-text-off">OFF</div>
+</div>
+</div>
+
+<div class="item">
+  <mat-icon svgIcon="mat_solid:sensor_door"></mat-icon> Porte
+  <input type="checkbox" id="toggle-button-checkbox-4"
+(change)="updatePorte($event.target.checked)">
+<label class="toggle-button-switch-3"  
+for="toggle-button-checkbox-4"></label>
+<div class="toggle-button-text">
+<div class="toggle-button-text-on">ON</div>
+<div class="toggle-button-text-off">OFF</div>
+</div>
+</div>
+
+<div class="item">
+  <mat-icon svgIcon="heroicons_outline:fire"></mat-icon> fumée
+  <input type="checkbox" id="toggle-button-checkbox-5"
+  (change)="updateFumee($event.target.checked)">
+  <label class="toggle-button-switch-4"  
+  for="toggle-button-checkbox-5"></label>
+  <div class="toggle-button-text">
+    <div class="toggle-button-text-on">ON</div>
+    <div class="toggle-button-text-off">OFF</div>
+  </div>
+</div>
+
+<div class="item">
+  <mat-icon svgIcon="feather:alert-triangle"></mat-icon> SOS
+  <input type="checkbox" id="toggle-button-checkbox-6"
+  (change)="updateSOS($event.target.checked)">
+  <label class="toggle-button-switch-5"  
+  for="toggle-button-checkbox-6"></label>
+  <div class="toggle-button-text">
+    <div class="toggle-button-text-on">ON</div>
+    <div class="toggle-button-text-off">OFF</div>
+  </div>
+</div>
+
+<div class="item">
+  <mat-icon svgIcon="heroicons_outline:fire"></mat-icon> Antivol
+  <input type="checkbox" id="toggle-button-checkbox-7"
+  (change)="updateVol($event.target.checked)">
+  <label class="toggle-button-switch-6"  
+  for="toggle-button-checkbox-7"></label>
+  <div class="toggle-button-text">
+    <div class="toggle-button-text-on">ON</div>
+    <div class="toggle-button-text-off">OFF</div>
+  </div>
+</div>
+
+
+<div class="item">
+  <mat-icon svgIcon="heroicons_outline:user"></mat-icon> Mouvement
+  <input type="checkbox" id="toggle-button-checkbox-8"
+  (change)="updateMvt($event.target.checked)">
+  <label class="toggle-button-switch-7"  
+  for="toggle-button-checkbox-8"></label>
+  <div class="toggle-button-text">
+    <div class="toggle-button-text-on">ON</div>
+    <div class="toggle-button-text-off">OFF</div>
+  </div>
+</div>
+
+</div>
+</body>
+
+

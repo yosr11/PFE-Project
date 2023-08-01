@@ -1,0 +1,62 @@
+form {
+  display: flex;
+  flex-direction: column;
+  border: 1.5px solid #000000;
+  border-radius: 0.5em;
+  box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.2);
+  width: 600px;
+  max-width: 1000%;
+  //background-color: transparent;
+  margin-top: 1%;
+  margin-left: 30%;
+ 
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-left: 30%;
+}
+
+mat-form-field {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+mat-label {
+  font-size: 1rem;
+  font-weight:bolder;
+  margin-left: 1%;
+}
+
+input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 70%;
+  margin-left: 2%;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+ // background-image: linear-gradient(to right, #1a202c, #4299e1);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.invalid {
+  border: 1px solid red;
+}
+
+/* Style pour les messages d'erreur */
+.error-message {
+  color: red;
+}

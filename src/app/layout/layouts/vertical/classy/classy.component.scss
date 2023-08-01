@@ -1,0 +1,94 @@
+/* Style pour le bouton de notification */
+.notification-button {
+    position: relative;
+  }
+  
+  .notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style pour le panneau d'expansion de notification */
+  .notification-panel {
+    margin-top: 50%;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 20%;
+    width: 30%;
+    background-color: aqua;
+  }
+  
+  .notification-panel mat-panel-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    margin-top: 30%;
+  }
+  
+  .notification-panel mat-list {
+    padding: 0;
+    margin-top: 30%;
+  }
+  
+  .notification-panel mat-list-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-top: 30%;
+  }
+  
+  .notification-panel mat-list-item:last-child {
+    border-bottom: none;
+    margin-top: 30%;
+  }
+  
+  .notification-panel mat-line {
+    font-size: 14px;
+    color: #555;
+    margin-top: 30%;
+  }
+  .mat-list-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #ccc;
+    margin-top: 30%;
+  }
+  
+  .mat-list-item:last-child {
+    border-bottom: none;
+    margin-top: 30%;
+  }
+  
+  .mat-list-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .mat-list-item .mat-line {
+    display: block;
+    font-size: 14px;
+    margin-top: 8px;
+    color: #555;
+  }
+  
+  .mat-list-item .mat-line:first-child {
+    font-size: 18px;
+    color: #333;
+  }
+  .mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+  }
+  .mat-menu-custom {
+    width: 400px; /* Ajustez la largeur selon vos besoins */
+    max-height: 500px; /* Ajustez la hauteur selon vos besoins */
+    overflow-y: auto; /* Permet de faire défiler le contenu si nécessaire */
+  }
+ 

@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "medisail-project"
+  },
+  "targets": {
+    "medisail-project": {
+      "hosting": {
+        "fuse": [
+          "medisail-project"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

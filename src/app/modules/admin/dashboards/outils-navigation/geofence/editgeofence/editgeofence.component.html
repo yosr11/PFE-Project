@@ -1,0 +1,9 @@
+<form *ngIf="Geofenceform" [formGroup]="Geofenceform">
+    <h2 mat-dialog-title>Modifier la geofence</h2> 
+        <mat-form-field appearance="fill">
+          <mat-label>radius</mat-label>
+          <input matInput formControlName="radius" />
+        </mat-form-field>
+        <button mat-button (click)="edit()">Modifier</button><br><br>
+       
+  </form>

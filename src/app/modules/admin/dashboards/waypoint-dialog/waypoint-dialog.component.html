@@ -1,0 +1,20 @@
+<h2>Liste des waypoints</h2>
+<table mat-table [dataSource]="dataSource"  style="max-width: 10%; margin: 50px auto 0" [ngClass]="{'table-one-col': displayedColumns.length === 1}">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef style="color: rgb(55, 95, 183);">name</th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+  <ng-container matColumnDef="latitude">
+    <th mat-header-cell *matHeaderCellDef style="color: rgb(55, 95, 183);"> Latitude </th>
+    <td mat-cell *matCellDef="let element"> {{element.latitude}} </td>
+  </ng-container>
+  <ng-container matColumnDef="longitude">
+    <th mat-header-cell *matHeaderCellDef style="color: rgb(55, 95, 183);"> Longitude </th>
+    <td mat-cell *matCellDef="let element"> {{element.longitude}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<button mat-button (click)="onNoClick()"><mat-icon svgIcon="close"></mat-icon></button>
+

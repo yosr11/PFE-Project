@@ -1,0 +1,15 @@
+<form *ngIf="GeoForm" [formGroup]="GeoForm" >
+    <h2 >Ajouter un bateau</h2> 
+    <mat-form-field appearance="fill">
+         
+      <mat-label>Radius</mat-label>
+        <input matInput formControlName="radius" />
+        <mat-error   *ngIf="GeoForm.get('radius').hasError('required')">
+          Radius is required
+      </mat-error>
+      </mat-form-field><br>
+      <button  class="fuse-mat-button-large w-full  bg-gradient-to-r from-blue-900 to-blue-300"
+      mat-button (click)="ajout()">Ajouter</button><br><br>
+   
+</form>
+ 

@@ -1,0 +1,37 @@
+.notification-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    min-width: 200px;
+  }
+
+  .notification-menu-header {
+    padding: 5px;
+    background-color: #eee;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .notification-menu-list {
+    max-height: 400px;
+    overflow: auto;
+  }
+
+  .notification-menu-item {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .notification-menu-title {
+    font-weight: bold;
+  }
+
+  .notification-menu-timestamp {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 5px;
+  }

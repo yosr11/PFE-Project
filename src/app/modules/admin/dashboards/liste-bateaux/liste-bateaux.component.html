@@ -1,0 +1,62 @@
+<div class="demo-button-container">
+  <button mat-raised-button (click)="addData()" class="btn btn-primary">
+    <mat-icon svgIcon="mat_solid:add" class="mat-icon-white"></mat-icon>
+  </button>
+
+
+  <!--<button mat-raised-button (click)="editData(element)" class="demo-button">
+    <mat-icon svgIcon="edit" class="mat-icon-white"></mat-icon>
+  </button>-->
+</div>
+
+<!--tableau de bateau-->
+<div>
+
+  <table mat-table [dataSource]="dataSource"
+    style="margin: 75px; margin-left: 8%; border-spacing: 20px ; border-collapse: separate; background-color: transparent;"
+    [ngClass]="{'table-one-col': displayedColumns.length === 1}">
+
+    <ng-container matColumnDef="image">
+      <th mat-header-cell *matHeaderCellDef style="width:100px;"></th>
+      <td mat-cell *matCellDef="let element">
+        <img src="assets/images/logo/boat5.png" style="width: 50px;height: 40px;">
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef style="width: 150px; color: rgb(3, 25, 70); background-color: transparent ">Nom</th>
+      <td mat-cell *matCellDef="let element" style="background-color: transparent;">{{element.name}}</td>
+    </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="boitier_imei">
+      <th mat-header-cell *matHeaderCellDef style="width: 200px;  color:rgb(3, 25, 70); background-color:transparent;">Boitier_imei</th>
+      <td mat-cell *matCellDef="let element" style="background-color: transparent;">{{element.boitier_imei}}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="boitier_phone">
+      <th mat-header-cell *matHeaderCellDef style="width: 200px; color:  rgb(3, 25, 70); background-color: transparent;">Boitier_telephone</th>
+      <td mat-cell *matCellDef="let element" style="background-color: transparent;">{{element.boitier_phone}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef style="color:  rgb(3, 25, 70); background-color: transparent;">Action</th>
+      <td mat-cell *matCellDef="let element" style="max-width: 700px; background-color: transparent">
+        <button mat-icon-button color="primary" (click)="editData(element)">
+          <mat-icon svgIcon="mat_solid:edit"></mat-icon>
+        </button>
+        <!--remove data-->
+        <button mat-button color="primary" (click)="removeData(element)">
+          <mat-icon svgIcon="mat_solid:delete" class="mat-icon-white"></mat-icon>
+        </button>
+        <button mat-button color="primary" (click)="Details(element)">
+          <mat-icon svgIcon="feather:navigation"></mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" style="border-color:black;"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" style="border-color: black; "></tr>
+
+  </table>
+</div>

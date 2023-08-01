@@ -1,0 +1,47 @@
+<body background="assets/images/weather/plage2.png" style="width:100%; height: 100%; background-repeat: no-repeat; background-size: cover;"  >
+<div class="container">
+    <h1 style="color: #F49807;">Commandez !</h1>
+    <div class="item" style="display: block; margin-top: 3%;">
+        <div class="item-content" style="display: flex; justify-content: space-between;">
+          <div style="display: flex; align-items: center;">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="assets/icons/pump.PNG" style="width: 30px; height: 30px;" class="item-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <h4 class="item-text" style="color: antiquewhite;">Pompe de cale</h4>
+          </div>
+          <mat-slide-toggle class="toggle" (change)="onToggle($event.checked, 'pompe')" color="primary"></mat-slide-toggle>
+        </div>
+      </div>
+      
+
+      <div class="item" style="display: block; margin-top: 3%;">
+        <div class="item-content" style="display: flex; justify-content: space-between;">
+          <div style="display: flex; align-items: center;">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="assets/icons/anchor.PNG" style="width: 30px; height: 30px;" class="item-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <h4 class="item-text" style="color: antiquewhite;">Mode mouillage</h4>
+          </div>
+          <mat-slide-toggle class="toggle" (change)="onToggle($event.checked, 'mouillage')" color="warn"></mat-slide-toggle>
+        </div>
+      </div>
+
+     <div class="item" style="display: block; margin-top: 3%;">
+        <div class="item-content" style="display: flex; justify-content: space-between;">
+          <div style="display: flex; align-items: center;">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="assets/icons/security.PNG" style="width: 30px; height: 30px;" class="item-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <h4 class="item-text" style="color: antiquewhite;">Sécurité</h4>
+          </div>
+          <mat-slide-toggle class="toggle" (change)="onToggle($event.checked,'security')" color="warn"></mat-slide-toggle>
+        </div>
+      </div>
+
+      <div class="item" style="display: block; margin-top: 3%;">
+        <div class="item-content" style="display: flex; justify-content: space-between;">
+          <div style="display: flex; align-items: center;">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="assets/icons/door.PNG" style="width: 30px; height: 30px;" class="item-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <h4 class="item-text" style="color: antiquewhite;">Porte</h4>
+          </div>
+          <mat-slide-toggle class="toggle" (change)="onToggle($event.checked,'door')" color="warn"></mat-slide-toggle>
+        </div>
+      </div>
+    <button (click)="sendSMS(message)"></button>
+    
+</div>
+</body>

@@ -1,0 +1,35 @@
+<form *ngIf="form" [formGroup]="form">
+  <h2 >Modifier le bateau</h2> 
+    <mat-form-field appearance="fill">
+       
+    <mat-label>nom</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+    <mat-label>boitier_imei</mat-label>
+      <input matInput formControlName="boitier_imei" />
+      <mat-error   *ngIf="form.get('boitier_imei').hasError('required')">
+        boitier_imei is required
+    </mat-error>
+    <mat-error *ngIf="form.get('boitier_imei').value?.length !== 15 && form.get('boitier_imei').dirty">
+      l'imei doit contenir 15 chiffres
+    </mat-error>
+    </mat-form-field><br>
+      <mat-form-field appearance="fill">
+        <mat-label>boitier_telephone</mat-label>
+        <input matInput formControlName="boitier_phone" />
+        <mat-error   *ngIf="form.get('boitier_phone').hasError('required')">
+          boitier_imei is required
+      </mat-error>
+      <mat-error *ngIf="form.get('boitier_phone').value?.length !== 15 && form.get('boitier_phone').dirty">
+        l'imei doit contenir 15 chiffres
+      </mat-error>
+      </mat-form-field>
+      <button class="fuse-mat-button-large w-full  bg-gradient-to-r from-blue-900 to-blue-300"
+       mat-button (click)="onSave(element)">Modifier</button><br><br>
+     
+</form>
+ 
+
+
+

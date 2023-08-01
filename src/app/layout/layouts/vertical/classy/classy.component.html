@@ -1,0 +1,80 @@
+<!-- Loading bar -->
+<fuse-loading-bar></fuse-loading-bar>
+<!-- Navigation -->
+<fuse-vertical-navigation
+    class="dark bg-gray-900 print:hidden"
+    [mode]="isScreenSmall ? 'over' : 'side'"
+    [name]="'mainNavigation'"
+    [navigation]="navigation.default"
+    [opened]="!isScreenSmall">
+    
+    <!-- Navigation header hook -->
+    <ng-container fuseVerticalNavigationContentHeader>
+        <div class="flex items-center w-full p-4 pl-6">
+           
+            <!-- Logo -->
+            <div class="flex items-center justify-center" >
+                <img
+                    class="w-22" style=" display:flex; justify-content:center ;margin-left: 150%; height: 150%;width: 150%; margin-top: 5%;"
+                    src="assets/images/logo/Medisail.png" >
+            </div>
+            <!-- Components -->
+        </div>
+    </ng-container>
+</fuse-vertical-navigation>
+
+<!-- Wrapper -->
+<div class="flex flex-col flex-auto w-full min-w-0">
+
+    <!-- Header -->
+    <div class="relative flex flex-0 items-center w-full h-16 px-4 md:px-6 z-49 shadow dark:shadow-none dark:border-b bg-card dark:bg-transparent print:hidden">
+        <!-- Navigation toggle button -->
+        <button
+            mat-icon-button
+            (click)="toggleNavigation('mainNavigation')">
+            <mat-icon [svgIcon]="'heroicons_outline:menu'"></mat-icon>
+        </button>
+        <!-- Components -->
+        <div class="flex items-center pl-2 ml-auto space-x-0.5 sm:space-x-2">
+            <!--<languages></languages>-->
+            <!--<fuse-fullscreen ></fuse-fullscreen>-->
+            <!--<search [appearance]="'bar'"></search>-->
+            <button
+                mat-icon-button
+                (click)="openPanel()"
+                #meteoOrigin>
+                <i class="fa-solid fa-cloud" style="color: #0077b3;"></i>
+            </button>
+
+
+            <button mat-button [matMenuTriggerFor]="menu">
+              <i class="fa-solid fa-bell" style="color: #0077b3;"></i>
+              
+            </button>
+            
+            <mat-menu #menu="matMenu" class="mat-menu-custom" (matMenuOpened)="loadNotifications()">
+              <h3 mat-menu-title style="margin-left:30%; color: #e4a400; font-weight: 800;">Notifications</h3>
+              <ng-container *ngFor="let notification of notifications">
+                <mat-divider></mat-divider>
+                <mat-list-item [ngClass]="{'read': notification.isRead}">
+                  <h4 mat-line style="margin-left: 4%;">{{notification.title}}</h4>
+                  <p mat-line style="margin-left: 4%;">{{notification.message}}</p>
+                  <p mat-line style="margin-left: 4%;">{{notification.timestamp | date:'short'}}</p>
+                </mat-list-item>
+              </ng-container>
+              <button mat-icon-button (click)="goToNotificationHistory()">
+                <mat-icon>history</mat-icon>
+              </button>
+            </mat-menu>
+            
+            <user [showAvatar]="true"></user>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="flex flex-col flex-auto">
+        <router-outlet *ngIf="true"></router-outlet>
+    </div>
+</div>
+
+

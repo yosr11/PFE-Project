@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ma carte Leaflet</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <style>
+    #container {
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 80%;
+      width: 100%;
+    }
+    
+    #map-geofence {
+      grid-row: 2 / 3;
+    }
+   </style> 
+</head>
+<body>
+  
+  
+    <div id="container">
+      <div id="buttons">
+        <button mat-raised-button *ngIf="!hasGeofence" (click)="AddGeofence()" class="btn btn-primary">
+          <mat-icon svgIcon="mat_solid:add" class="mat-icon-white"></mat-icon>
+        </button>
+        <button mat-raised-button (click)="editGeofence()" class="btn btn-primary">
+          <mat-icon svgIcon="edit"></mat-icon>
+        </button>
+      </div>
+      
+    </div>
+    <div id="map-geofence"></div>
+  <script src="node_modules/leaflet/dist/leaflet.js"></script>
+</body>
+</html>
